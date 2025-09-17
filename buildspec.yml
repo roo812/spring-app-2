@@ -10,7 +10,7 @@ phases:
       - mvn clean install
       - echo Logging in to Amazon ECR...
       - aws --version
-      - REPOSITORY_URI=400054515716.dkr.ecr.us-east-1.amazonaws.com/spring-app-2
+      - "REPOSITORY_URI=400054515716.dkr.ecr.us-east-1.amazonaws.com/spring-app-2"
       - aws ecr get-login-password --region us-east-1 | docker login --username AWS --password-stdin $REPOSITORY_URI
       - "IMAGE_TAG=build-$CODEBUILD_RESOLVED_SOURCE_VERSION"
       - echo "Image tag: $IMAGE_TAG"
