@@ -10,7 +10,7 @@ phases:
       - echo "Logging in to Amazon ECR..."
       - ACCOUNT_ID=$(aws sts get-caller-identity --query Account --output text)
       - REGION=$AWS_DEFAULT_REGION
-      - REPOSITORY_URI=$ACCOUNT_ID.dkr.ecr.$REGION.amazonaws.com/$REPOSITORY_NAME
+      - REPOSITORY_URI=400054515716.dkr.ecr.us-east-1.amazonaws.com/spring-app-2
       - echo "ECR Repository URI: $REPOSITORY_URI"
       - aws ecr get-login-password --region $REGION | docker login --username AWS --password-stdin $REPOSITORY_URI
       #creates a unique docker image tag for this build
