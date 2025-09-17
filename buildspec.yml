@@ -29,7 +29,8 @@ phases:
       - echo "Pushing Docker image to ECR..."
       - docker push $REPOSITORY_URI:$IMAGE_TAG
       - echo "Writing imagedefinitions.json for ECS..."
-      - printf '[{"name":"spring-app","imageUri":"%s"}]' $REPOSITORY_URI:$IMAGE_TAG > imagedefinitions.json #creates a file called imagedefinations which is required for ecs/code deploy in deployment stage.ECS uses this file to know which image to run in which container.
+      - printf '[{"name":"spring-app","imageUri":"%s"}]' $REPOSITORY_URI:$IMAGE_TAG > imagedefinitions.json 
+      #creates a file called imagedefinations which is required for ecs/code deploy in deployment stage.ECS uses this file to know which image to run in which container.
       - echo "Build completed successfully."
 
 artifacts:
