@@ -7,7 +7,7 @@
   "containerDefinitions": [
     {
       "name": "spring-app",
-      "image": "400054515716.dkr.ecr.us-east-1.amazonaws.com/spring-app:latest",
+      "image": "400054515716.dkr.ecr.us-east-1.amazonaws.com/spring-app-2:latest",
       "essential": true,
       "portMappings": [
         {
