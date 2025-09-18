@@ -1,11 +1,9 @@
 version: 0.0
 Resources:
-  - myECSService:
+  - TargetService:
       Type: AWS::ECS::Service
       Properties:
-        ClusterName: First  # Your ECS cluster name
-        ServiceName: second  # Your ECS service name
-        TaskDefinition: imagedefinitions:1  # ECS task definition with the revision number
+        TaskDefinition: "spring-app-task" # ECS task definition family name
         LoadBalancerInfo:
-          ContainerName: sprinrajco  # Container name as defined in the task definition
-          ContainerPort: 80  # The container port exposed
+          ContainerName: "spring-app"
+          ContainerPort: 8080
